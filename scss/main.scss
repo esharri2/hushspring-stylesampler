@@ -2,23 +2,32 @@
 @use "./_colors.scss";
 @use "./_mixins.scss";
 
-$header-height: 15vh;
+$header-height: 25vh;
+$desktop-header-height: 15vh;
 
 header {
   font-family: Cutive Mono, monospace;
   text-transform: uppercase;
   font-size: 1rem;
   display: flex;
+  flex-wrap: wrap;
   position: fixed;
   left: 0;
   right: 0;
   align-items: center;
-  justify-content: space-between;
   height: $header-height;
   background-color: white;
   padding: 0 1rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
+  @include mixins.respond-to(small) {
+      justify-content: space-between;
+      height: $desktop-header-height;
+  }
+  
+  h1{
+      margin: 0;
+  }
   .controls {
     display: flex;
 
@@ -27,11 +36,15 @@ header {
     }
 
     label {
+        padding: .5rem;
+      @include mixins.respond-to(large) {
       padding: 1rem;
+
+      }
     }
     .case-switch,
     .color-select {
-      border-right: 1px solid black;
+      border-right: 1px solid gray;
     }
   }
 }
@@ -41,9 +54,14 @@ main {
   max-width: 992px;
   margin: 0 auto;
 
+  @include mixins.respond-to(small) {
+      padding-top: $desktop-header-height;
+  }
+
   section {
+//    height: 70vh - $header-height;
     @include mixins.respond-to(small) {
-      height: 70vh - $header-height;
+      height: 70vh - $desktop-header-height;
     }
 
     .sample-title {
@@ -52,7 +70,7 @@ main {
       grid-column-end: 3;
       font-family: Cutive Mono, monospace;
       background-color: white;
-      padding: 2rem 0;
+      padding: 3rem 0 2rem 0;
       color: black;
       font-size: 1.1rem;
       text-transform: uppercase;
@@ -76,9 +94,23 @@ main {
       overflow: hidden;
     }
 
-    .heading.uppercase {
-      text-transform: uppercase;
+    .heading {
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: .9;
+        }
+
+        h1:first-child {
+            margin-top: 0;
+        }
+
+        &.uppercase {
+            text-transform: uppercase;
+        }
     }
+
+
 
     .accent {
       min-height: 5rem;
@@ -104,9 +136,20 @@ main {
   }
 }
 
+// TODO - use a set to streamline this
+@include mixins.set-font("berkshire-swash", "Berkshire Swash");
 @include mixins.set-font("comfortaa", "Comfortaa");
+@include mixins.set-font("cormorant-upright", "Cormorant Upright");
+@include mixins.set-font("crimson-text", "Crimson Text");
+@include mixins.set-font("fira-sans-condensed", "Fira Sans Condensed");
+@include mixins.set-font("inter", "Inter");
+@include mixins.set-font("league-script", "League Script");
 @include mixins.set-font("libre-baskerville", "Libre Baskerville");
 @include mixins.set-font("lobster", "Lobster");
+@include mixins.set-font("lora", "Lora");
+@include mixins.set-font("open-sans", "Open Sans");
+@include mixins.set-font("poppins", "Poppins");
+@include mixins.set-font("rakkas", "Rakkas");
 @include mixins.set-font("roboto", "Roboto");
 
 @include mixins.color-modifiers;

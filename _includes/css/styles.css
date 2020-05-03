@@ -342,15 +342,24 @@ header {
   text-transform: uppercase;
   font-size: 1rem;
   display: flex;
+  flex-wrap: wrap;
   position: fixed;
   left: 0;
   right: 0;
   align-items: center;
-  justify-content: space-between;
-  height: 15vh;
+  height: 25vh;
   background-color: white;
   padding: 0 1rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+@media (min-width: 767px) {
+  header {
+    justify-content: space-between;
+    height: 15vh;
+  }
+}
+header h1 {
+  margin: 0;
 }
 header .controls {
   display: flex;
@@ -359,17 +368,27 @@ header .controls select {
   text-transform: uppercase;
 }
 header .controls label {
-  padding: 1rem;
+  padding: 0.5rem;
+}
+@media (min-width: 1200px) {
+  header .controls label {
+    padding: 1rem;
+  }
 }
 header .controls .case-switch,
 header .controls .color-select {
-  border-right: 1px solid black;
+  border-right: 1px solid gray;
 }
 
 main {
-  padding-top: 15vh;
+  padding-top: 25vh;
   max-width: 992px;
   margin: 0 auto;
+}
+@media (min-width: 767px) {
+  main {
+    padding-top: 15vh;
+  }
 }
 @media (min-width: 767px) {
   main section {
@@ -382,7 +401,7 @@ main section .sample-title {
   grid-column-end: 3;
   font-family: Cutive Mono, monospace;
   background-color: white;
-  padding: 2rem 0;
+  padding: 3rem 0 2rem 0;
   color: black;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -402,6 +421,13 @@ main section .heading,
 main section .body {
   padding: 2rem;
   overflow: hidden;
+}
+main section .heading h1 {
+  font-size: 2.5rem;
+  line-height: 0.9;
+}
+main section .heading h1:first-child {
+  margin-top: 0;
 }
 main section .heading.uppercase {
   text-transform: uppercase;
@@ -426,8 +452,32 @@ main section .accent {
   font-family: cursive;
 }
 
+.berkshire-swash {
+  font-family: "Berkshire Swash", serif;
+}
+
 .comfortaa {
   font-family: "Comfortaa", serif;
+}
+
+.cormorant-upright {
+  font-family: "Cormorant Upright", serif;
+}
+
+.crimson-text {
+  font-family: "Crimson Text", serif;
+}
+
+.fira-sans-condensed {
+  font-family: "Fira Sans Condensed", serif;
+}
+
+.inter {
+  font-family: "Inter", serif;
+}
+
+.league-script {
+  font-family: "League Script", serif;
 }
 
 .libre-baskerville {
@@ -436,6 +486,22 @@ main section .accent {
 
 .lobster {
   font-family: "Lobster", serif;
+}
+
+.lora {
+  font-family: "Lora", serif;
+}
+
+.open-sans {
+  font-family: "Open Sans", serif;
+}
+
+.poppins {
+  font-family: "Poppins", serif;
+}
+
+.rakkas {
+  font-family: "Rakkas", serif;
 }
 
 .roboto {

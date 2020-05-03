@@ -4,8 +4,24 @@ samples:
     heading: Libre Baskerville  
     body: Roboto
   - title: 2
-    heading: Comfortaa
-    body: Lobster
+    heading: Cormorant Upright
+    body: Roboto
+  - title: 3
+    heading: Crimson Text
+    body: Open Sans
+  - title: 4
+    heading: Poppins
+    body: Inter
+  - title: 5
+    heading: Fira Sans Condensed
+    body: Inter
+  - title: 6
+    heading: League Script
+    body: Lora
+  - title: 7
+    heading: Rakkas
+    body: Roboto
+  
 palettes:
   - title: a
     text: raisinblack
