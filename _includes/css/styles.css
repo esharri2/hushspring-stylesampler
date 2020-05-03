@@ -1,0 +1,813 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+header {
+  font-family: Cutive Mono, monospace;
+  text-transform: uppercase;
+  font-size: 1rem;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  background-color: white;
+  padding: 0 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+header .controls {
+  display: flex;
+}
+header .controls select {
+  text-transform: uppercase;
+}
+header .controls label {
+  padding: 1rem;
+}
+header .controls .case-switch,
+header .controls .color-select {
+  border-right: 1px solid black;
+}
+
+main {
+  padding-top: 15vh;
+  max-width: 992px;
+  margin: 0 auto;
+}
+@media (min-width: 767px) {
+  main section {
+    height: 55vh;
+  }
+}
+main section .sample-title {
+  margin-top: 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-family: Cutive Mono, monospace;
+  background-color: white;
+  padding: 2rem 0;
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+main section .sample-section {
+  height: 100%;
+  padding-bottom: 2rem;
+}
+@media (min-width: 767px) {
+  main section .sample-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 3fr 1fr;
+  }
+}
+main section .heading,
+main section .body {
+  padding: 2rem;
+  overflow: hidden;
+}
+main section .heading.uppercase {
+  text-transform: uppercase;
+}
+main section .accent {
+  min-height: 5rem;
+  padding: 1rem;
+  font-family: Cutive Mono, monospace;
+  color: white;
+}
+
+.heading.helvetica,
+.body.helvetica {
+  font-family: Helvetica;
+}
+.heading.arial,
+.body.arial {
+  font-family: Arial;
+}
+.heading.cursive,
+.body.cursive {
+  font-family: cursive;
+}
+
+.comfortaa {
+  font-family: "Comfortaa", serif;
+}
+
+.libre-baskerville {
+  font-family: "Libre Baskerville", serif;
+}
+
+.lobster {
+  font-family: "Lobster", serif;
+}
+
+.roboto {
+  font-family: "Roboto", serif;
+}
+
+.text-bisque {
+  color: bisque;
+}
+
+.bg-bisque {
+  background-color: bisque;
+}
+
+.accent1-bisque .accent1 {
+  background-color: bisque;
+}
+
+.accent2-bisque .accent2 {
+  background-color: bisque;
+}
+
+.text-black {
+  color: black;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.accent1-black .accent1 {
+  background-color: black;
+}
+
+.accent2-black .accent2 {
+  background-color: black;
+}
+
+.text-cosmiclatte {
+  color: #fff8e8ff;
+}
+
+.bg-cosmiclatte {
+  background-color: #fff8e8ff;
+}
+
+.accent1-cosmiclatte .accent1 {
+  background-color: #fff8e8ff;
+}
+
+.accent2-cosmiclatte .accent2 {
+  background-color: #fff8e8ff;
+}
+
+.text-cyan {
+  color: cyan;
+}
+
+.bg-cyan {
+  background-color: cyan;
+}
+
+.accent1-cyan .accent1 {
+  background-color: cyan;
+}
+
+.accent2-cyan .accent2 {
+  background-color: cyan;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.bg-gray {
+  background-color: gray;
+}
+
+.accent1-gray .accent1 {
+  background-color: gray;
+}
+
+.accent2-gray .accent2 {
+  background-color: gray;
+}
+
+.text-green {
+  color: green;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.accent1-green .accent1 {
+  background-color: green;
+}
+
+.accent2-green .accent2 {
+  background-color: green;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.accent1-orange .accent1 {
+  background-color: orange;
+}
+
+.accent2-orange .accent2 {
+  background-color: orange;
+}
+
+.text-purple {
+  color: purple;
+}
+
+.bg-purple {
+  background-color: purple;
+}
+
+.accent1-purple .accent1 {
+  background-color: purple;
+}
+
+.accent2-purple .accent2 {
+  background-color: purple;
+}
+
+.text-raisinblack {
+  color: #262626ff;
+}
+
+.bg-raisinblack {
+  background-color: #262626ff;
+}
+
+.accent1-raisinblack .accent1 {
+  background-color: #262626ff;
+}
+
+.accent2-raisinblack .accent2 {
+  background-color: #262626ff;
+}
+
+.text-red {
+  color: red;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.accent1-red .accent1 {
+  background-color: red;
+}
+
+.accent2-red .accent2 {
+  background-color: red;
+}
+
+.text-rubyred {
+  color: #a20021ff;
+}
+
+.bg-rubyred {
+  background-color: #a20021ff;
+}
+
+.accent1-rubyred .accent1 {
+  background-color: #a20021ff;
+}
+
+.accent2-rubyred .accent2 {
+  background-color: #a20021ff;
+}
+
+.text-russianviolet {
+  color: #240b36ff;
+}
+
+.bg-russianviolet {
+  background-color: #240b36ff;
+}
+
+.accent1-russianviolet .accent1 {
+  background-color: #240b36ff;
+}
+
+.accent2-russianviolet .accent2 {
+  background-color: #240b36ff;
+}
+
+.text-blackcoffee {
+  color: #32292fff;
+}
+
+.bg-blackcoffee {
+  background-color: #32292fff;
+}
+
+.accent1-blackcoffee .accent1 {
+  background-color: #32292fff;
+}
+
+.accent2-blackcoffee .accent2 {
+  background-color: #32292fff;
+}
+
+.text-brightmaroon {
+  color: #b9223eff;
+}
+
+.bg-brightmaroon {
+  background-color: #b9223eff;
+}
+
+.accent1-brightmaroon .accent1 {
+  background-color: #b9223eff;
+}
+
+.accent2-brightmaroon .accent2 {
+  background-color: #b9223eff;
+}
+
+.text-roseebony {
+  color: #604d53ff;
+}
+
+.bg-roseebony {
+  background-color: #604d53ff;
+}
+
+.accent1-roseebony .accent1 {
+  background-color: #604d53ff;
+}
+
+.accent2-roseebony .accent2 {
+  background-color: #604d53ff;
+}
+
+.text-snow {
+  color: #f8f4f9ff;
+}
+
+.bg-snow {
+  background-color: #f8f4f9ff;
+}
+
+.accent1-snow .accent1 {
+  background-color: #f8f4f9ff;
+}
+
+.accent2-snow .accent2 {
+  background-color: #f8f4f9ff;
+}
+
+.text-rosewood {
+  color: #570000ff;
+}
+
+.bg-rosewood {
+  background-color: #570000ff;
+}
+
+.accent1-rosewood .accent1 {
+  background-color: #570000ff;
+}
+
+.accent2-rosewood .accent2 {
+  background-color: #570000ff;
+}
+
+.text-babypink {
+  color: #da9f93ff;
+}
+
+.bg-babypink {
+  background-color: #da9f93ff;
+}
+
+.accent1-babypink .accent1 {
+  background-color: #da9f93ff;
+}
+
+.accent2-babypink .accent2 {
+  background-color: #da9f93ff;
+}
+
+.text-pastelpink {
+  color: #f2ccc3ff;
+}
+
+.bg-pastelpink {
+  background-color: #f2ccc3ff;
+}
+
+.accent1-pastelpink .accent1 {
+  background-color: #f2ccc3ff;
+}
+
+.accent2-pastelpink .accent2 {
+  background-color: #f2ccc3ff;
+}
+
+.text-pinklace {
+  color: #f0d3f7ff;
+}
+
+.bg-pinklace {
+  background-color: #f0d3f7ff;
+}
+
+.accent1-pinklace .accent1 {
+  background-color: #f0d3f7ff;
+}
+
+.accent2-pinklace .accent2 {
+  background-color: #f0d3f7ff;
+}
+
+.text-manatee {
+  color: #8e9aafff;
+}
+
+.bg-manatee {
+  background-color: #8e9aafff;
+}
+
+.accent1-manatee .accent1 {
+  background-color: #8e9aafff;
+}
+
+.accent2-manatee .accent2 {
+  background-color: #8e9aafff;
+}
+
+.text-gunmetal {
+  color: #1b2432ff;
+}
+
+.bg-gunmetal {
+  background-color: #1b2432ff;
+}
+
+.accent1-gunmetal .accent1 {
+  background-color: #1b2432ff;
+}
+
+.accent2-gunmetal .accent2 {
+  background-color: #1b2432ff;
+}
+
+.text-spacecadet {
+  color: #302f4dff;
+}
+
+.bg-spacecadet {
+  background-color: #302f4dff;
+}
+
+.accent1-spacecadet .accent1 {
+  background-color: #302f4dff;
+}
+
+.accent2-spacecadet .accent2 {
+  background-color: #302f4dff;
+}
+
+/*# sourceMappingURL=styles.css.map */

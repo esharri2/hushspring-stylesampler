@@ -1,0 +1,112 @@
+@use "normalize.css";
+@use "./_colors.scss";
+@use "./_mixins.scss";
+
+$header-height: 15vh;
+
+header {
+  font-family: Cutive Mono, monospace;
+  text-transform: uppercase;
+  font-size: 1rem;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-height;
+  background-color: white;
+  padding: 0 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  .controls {
+    display: flex;
+
+    select {
+      text-transform: uppercase;
+    }
+
+    label {
+      padding: 1rem;
+    }
+    .case-switch,
+    .color-select {
+      border-right: 1px solid black;
+    }
+  }
+}
+
+main {
+  padding-top: $header-height;
+  max-width: 992px;
+  margin: 0 auto;
+
+  section {
+    @include mixins.respond-to(small) {
+      height: 70vh - $header-height;
+    }
+
+    .sample-title {
+      margin-top: 0;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-family: Cutive Mono, monospace;
+      background-color: white;
+      padding: 2rem 0;
+      color: black;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    .sample-section {
+      height: 100%;
+      padding-bottom: 2rem;
+
+
+      @include mixins.respond-to(small) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 3fr 1fr;
+      }
+    }
+
+    .heading,
+    .body {
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    .heading.uppercase {
+      text-transform: uppercase;
+    }
+
+    .accent {
+      min-height: 5rem;
+      padding: 1rem;
+      font-family: Cutive Mono, monospace;
+      color: white;
+    }
+  }
+}
+
+.heading,
+.body {
+  &.helvetica {
+    font-family: Helvetica;
+  }
+
+  &.arial {
+    font-family: Arial;
+  }
+
+  &.cursive {
+    font-family: cursive;
+  }
+}
+
+@include mixins.set-font("comfortaa", "Comfortaa");
+@include mixins.set-font("libre-baskerville", "Libre Baskerville");
+@include mixins.set-font("lobster", "Lobster");
+@include mixins.set-font("roboto", "Roboto");
+
+@include mixins.color-modifiers;

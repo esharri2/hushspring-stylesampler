@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% set fontString %}{% for sample in samples %}{% if loop.first%}{{sample.heading | makeFontString}}|{{sample.body | makeFontString}}{% else %}|{{sample.heading | makeFontString}}|{{sample.body | makeFontString}}{% endif %}{% endfor %}{% endset %}
+
+    {{fontString | log}}
+
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|{{fontString}}&display=swap" rel="stylesheet">
+    {# build google styles sheets #}
+    <style>
+      {% include "css/styles.css" ignore missing %}
+    </style>
+    <script defer src="/main.js"></script>
+    <title>Hush Spring Style Sampler</title>
+
+  </head>
+  <body>
+  {% set hasSamples = samples %}
+  <header>
+    <h1>Hush Spring Style Sampler</h1>
+    {% if hasSamples %}
+    <div class="controls">
+      <label class="case-switch">Uppercase:
+        <input type="checkbox">
+      </label>
+      <label class="color-select">Colors:
+        <select class="controls-palettes" id="palette-select">
+          {% for palette in palettes %}
+            <option value="text-{{palette.text}} bg-{{palette.bg}} accent1-{{palette.accent1}} accent2-{{palette.accent2}}">Palette {{palette.title}}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label class="color-switch">Invert colors:
+        <input type="checkbox">
+      </label>
+    </div>
+    {% endif %}
+  </header>
+  {% if hasSamples %}
+
+  <main>
+    {% for sample in samples %}
+      <section>
+        <div class="sample-section">
+        <h1 class="sample-title">Font sample {{sample.title}}: <a target="_blank" href="https://fonts.google.com/specimen/{{sample.heading}}">{{sample.heading}}</a>/<a target="_blank" href="https://fonts.google.com/specimen/{{sample.body}}">{{sample.body}}</a></h1>
+        {# CONCAT CLASS NAME WITH FONT #}
+          <div class="heading {{sample.heading | lower | replace(' ','-') }}">
+            {% for title in sample_titles %}
+              <h1>{{title.text}}</h1>
+            {% endfor %}
+          </div>
+          <div class="body {{sample.body | lower | replace(' ','-') }}">
+            {% for paragraph in sample_body %}
+              <p>{{paragraph.text}}</p>
+            {% endfor %}
+          </div>
+          <div class="accent accent1">
+
+          Accent 1
+          </div>
+          <div class="accent accent2">
+          Accent 2
+          </div>
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+  {% endif %}
+  <footer></footer>
+  {{test}}
+  </body>
+</html>

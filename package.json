@@ -1,0 +1,25 @@
+{
+  "name": "style-sampler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --style=expanded scss/main.scss _includes/css/styles.css",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "npm run sass -- --watch",
+    "start": "npm-run-all sass --parallel watch:*",
+    "build": "npm run sass --style=compressed && eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css": "^4.2.3",
+    "npm-run-all": "^4.1.5",
+    "@11ty/eleventy": "0.11.0-beta.2"
+  },
+  "dependencies": {
+    "sass": "^1.26.5"
+  }
+}

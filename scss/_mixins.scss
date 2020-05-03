@@ -1,0 +1,61 @@
+@use "colors.scss";
+
+@mixin color-modifiers {
+  @each $name, $hex in colors.$colors {
+    .text-#{"" + $name} {
+      color: $hex;
+    }
+
+    .bg-#{"" + $name } {
+      background-color: $hex;
+    }
+
+    .accent1-#{"" + $name} {
+      .accent1 {
+        background-color: $hex;
+      }
+    }
+
+    .accent2-#{"" + $name} {
+      .accent2 {
+        background-color: $hex;
+      }
+    }
+  }
+}
+
+@mixin create-palette-styles(
+  $text-color,
+  $bg-color,
+  $accent1-color,
+  $accent2-color
+) {
+}
+
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin set-font($font-class, $font-name) {
+  .#{"" + $font-class} {
+    font-family: $font-name, serif;
+  }
+}
