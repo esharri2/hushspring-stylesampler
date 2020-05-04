@@ -57,3 +57,5 @@
   initCaseSwitch();
   initColorSwitch();
 })();
+
+console.log("hi");
