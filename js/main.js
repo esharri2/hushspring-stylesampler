@@ -1,4 +1,6 @@
 (function () {
+
+  console.log('main.js');
   const main = document.querySelector("main");
 
   const initPaletteSelector = () => {
