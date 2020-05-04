@@ -60,6 +60,7 @@ main {
   section {
     @include mixins.respond-to(small) {
       height: 80vh - $desktop-header-height;
+      min-height: 500px;
     }
 
     .sample-title {

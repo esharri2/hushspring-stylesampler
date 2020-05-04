@@ -1,13 +1,12 @@
 (function () {
 
-  console.log('main.js');
   const main = document.querySelector("main");
 
   const initPaletteSelector = () => {
     const paletteSelector = document.querySelector("select.controls-palettes");
     if (!paletteSelector) console.error("Palette selector not available");
     addPaletteSelectorValue(paletteSelector.value, main);
-    paletteSelector.addEventListener("input", (event) => {
+    paletteSelector.addEventListener("change", (event) => {
       addPaletteSelectorValue(event.target.value, main);
     });
   };
@@ -23,7 +22,7 @@
   const initCaseSwitch = () => {
     const caseSwitch = document.querySelector(".case-switch");
     if (!caseSwitch) return;
-    caseSwitch.addEventListener("input", function (event) {
+    caseSwitch.addEventListener("change", function (event) {
       document.querySelectorAll(".heading, .body").forEach((el) => {
         el.classList.toggle("uppercase");
       });
@@ -33,7 +32,7 @@
   const initColorSwitch = () => {
     const colorSwitch = document.querySelector(".color-switch");
     if (!colorSwitch) return;
-    colorSwitch.addEventListener("input", function(event) {
+    colorSwitch.addEventListener("change", function(event) {
       const classes = main.classList;
       let textClassIndex;
       let bgClassIndex;
@@ -57,5 +56,3 @@
   initCaseSwitch();
   initColorSwitch();
 })();
-
-console.log("hi");
