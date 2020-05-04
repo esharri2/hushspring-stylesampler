@@ -2,25 +2,20 @@
 samples:
   - title: 1
     heading: Libre Baskerville  
-    body: Roboto
-  - title: 2
-    heading: Cormorant Upright
-    body: Roboto
-  - title: 3
-    heading: Crimson Text
-    body: Open Sans
-  - title: 4
-    heading: Poppins
-    body: Inter
-  - title: 5
-    heading: Fira Sans Condensed
-    body: Inter
-  - title: 6
-    heading: League Script
     body: Lora
-  - title: 7
-    heading: Rakkas
-    body: Roboto
+  - title: 2
+    heading: Cutive Mono
+    body: Lora
+  - title: 3
+    heading: Cutive Mono
+    body: Muli
+  - title: 4
+    heading: Muli
+    body: Muli
+  - title: 5
+    heading: Lato
+    body: Lato
+
   
 palettes:
   - title: a

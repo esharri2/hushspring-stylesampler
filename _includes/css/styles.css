@@ -392,7 +392,7 @@ main {
 }
 @media (min-width: 767px) {
   main section {
-    height: 55vh;
+    height: 65vh;
   }
 }
 main section .sample-title {
@@ -432,6 +432,9 @@ main section .heading h1:first-child {
 main section .heading.uppercase {
   text-transform: uppercase;
 }
+main section .body p:first-child {
+  margin-top: 0;
+}
 main section .accent {
   min-height: 5rem;
   padding: 1rem;
@@ -468,12 +471,20 @@ main section .accent {
   font-family: "Crimson Text", serif;
 }
 
+.cutive-mono {
+  font-family: "Cutive Mono", serif;
+}
+
 .fira-sans-condensed {
   font-family: "Fira Sans Condensed", serif;
 }
 
 .inter {
   font-family: "Inter", serif;
+}
+
+.lato {
+  font-family: "Lato", serif;
 }
 
 .league-script {
@@ -490,6 +501,10 @@ main section .accent {
 
 .lora {
   font-family: "Lora", serif;
+}
+
+.muli {
+  font-family: "Muli", serif;
 }
 
 .open-sans {
